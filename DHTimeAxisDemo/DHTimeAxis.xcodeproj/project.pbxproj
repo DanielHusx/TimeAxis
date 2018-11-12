@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63FEFD5921994818000647B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEFD5821994818000647B8 /* AppDelegate.m */; };
+		63FEFD5C21994818000647B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEFD5B21994818000647B8 /* ViewController.m */; };
+		63FEFD5F21994818000647B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63FEFD5D21994818000647B8 /* Main.storyboard */; };
+		63FEFD612199481B000647B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63FEFD602199481B000647B8 /* Assets.xcassets */; };
+		63FEFD642199481B000647B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63FEFD622199481B000647B8 /* LaunchScreen.storyboard */; };
+		63FEFD672199481B000647B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEFD662199481B000647B8 /* main.m */; };
+		63FEFD76219948C3000647B8 /* DHTimeAxisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEFD75219948C3000647B8 /* DHTimeAxisView.m */; };
+		63FEFD7A2199497E000647B8 /* DHTimeAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEFD792199497E000647B8 /* DHTimeAxis.m */; };
+		63FEFD7D21994A02000647B8 /* DHTimeAxisBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEFD7C21994A02000647B8 /* DHTimeAxisBackground.m */; };
+		63FEFD8021994A4A000647B8 /* DHTimeAxisRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEFD7F21994A4A000647B8 /* DHTimeAxisRenderer.m */; };
+		63FEFD8321994AF6000647B8 /* DHTimeAxisBaseLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEFD8221994AF6000647B8 /* DHTimeAxisBaseLine.m */; };
+		63FEFD8621994BD9000647B8 /* DHTimeAxisAppearanceRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEFD8521994BD9000647B8 /* DHTimeAxisAppearanceRecognizer.m */; };
+		63FEFD8921994C5E000647B8 /* DHTimeAxisData.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEFD8821994C5E000647B8 /* DHTimeAxisData.m */; };
+		63FEFD8C21994CAA000647B8 /* DHTimeAxisRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEFD8B21994CAA000647B8 /* DHTimeAxisRule.m */; };
+		63FEFD8F21994D41000647B8 /* DHTimeAxisDigitalDivision.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEFD8E21994D41000647B8 /* DHTimeAxisDigitalDivision.m */; };
+		63FEFD92219952C6000647B8 /* DHTimeAxisAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEFD91219952C6000647B8 /* DHTimeAxisAppearance.m */; };
+		63FEFD952199531C000647B8 /* DHTimeAxisDynamicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEFD942199531C000647B8 /* DHTimeAxisDynamicItem.m */; };
+		63FEFD9921995519000647B8 /* DHTimeAxis+Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEFD9821995519000647B8 /* DHTimeAxis+Appearance.m */; };
+		63FEFD9D219955D5000647B8 /* DHTimeAxis+Dynamic.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEFD9C219955D5000647B8 /* DHTimeAxis+Dynamic.m */; };
+		63FEFDA2219956CD000647B8 /* DHTimeAxisGearRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEFDA1219956CD000647B8 /* DHTimeAxisGearRenderer.m */; };
+		63FEFDA521995776000647B8 /* DHTimeAxisRuleRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEFDA421995776000647B8 /* DHTimeAxisRuleRenderer.m */; };
+		63FEFDAE21997039000647B8 /* DHTimeAxisAppearance+Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEFDAD21997039000647B8 /* DHTimeAxisAppearance+Renderer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		63FEFD5421994818000647B8 /* DHTimeAxis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHTimeAxis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63FEFD5721994818000647B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		63FEFD5821994818000647B8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		63FEFD5A21994818000647B8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		63FEFD5B21994818000647B8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		63FEFD5E21994818000647B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		63FEFD602199481B000647B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63FEFD632199481B000647B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		63FEFD652199481B000647B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63FEFD662199481B000647B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		63FEFD6F2199488A000647B8 /* DHTimeAxisComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTimeAxisComponent.h; sourceTree = "<group>"; };
+		63FEFD712199489C000647B8 /* DHTimeAxisVisitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTimeAxisVisitor.h; sourceTree = "<group>"; };
+		63FEFD74219948C3000647B8 /* DHTimeAxisView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTimeAxisView.h; sourceTree = "<group>"; };
+		63FEFD75219948C3000647B8 /* DHTimeAxisView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHTimeAxisView.m; sourceTree = "<group>"; };
+		63FEFD782199497E000647B8 /* DHTimeAxis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTimeAxis.h; sourceTree = "<group>"; };
+		63FEFD792199497E000647B8 /* DHTimeAxis.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHTimeAxis.m; sourceTree = "<group>"; };
+		63FEFD7B21994A02000647B8 /* DHTimeAxisBackground.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTimeAxisBackground.h; sourceTree = "<group>"; };
+		63FEFD7C21994A02000647B8 /* DHTimeAxisBackground.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHTimeAxisBackground.m; sourceTree = "<group>"; };
+		63FEFD7E21994A4A000647B8 /* DHTimeAxisRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTimeAxisRenderer.h; sourceTree = "<group>"; };
+		63FEFD7F21994A4A000647B8 /* DHTimeAxisRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHTimeAxisRenderer.m; sourceTree = "<group>"; };
+		63FEFD8121994AF6000647B8 /* DHTimeAxisBaseLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTimeAxisBaseLine.h; sourceTree = "<group>"; };
+		63FEFD8221994AF6000647B8 /* DHTimeAxisBaseLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHTimeAxisBaseLine.m; sourceTree = "<group>"; };
+		63FEFD8421994BD9000647B8 /* DHTimeAxisAppearanceRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTimeAxisAppearanceRecognizer.h; sourceTree = "<group>"; };
+		63FEFD8521994BD9000647B8 /* DHTimeAxisAppearanceRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHTimeAxisAppearanceRecognizer.m; sourceTree = "<group>"; };
+		63FEFD8721994C5E000647B8 /* DHTimeAxisData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTimeAxisData.h; sourceTree = "<group>"; };
+		63FEFD8821994C5E000647B8 /* DHTimeAxisData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHTimeAxisData.m; sourceTree = "<group>"; };
+		63FEFD8A21994CAA000647B8 /* DHTimeAxisRule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTimeAxisRule.h; sourceTree = "<group>"; };
+		63FEFD8B21994CAA000647B8 /* DHTimeAxisRule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHTimeAxisRule.m; sourceTree = "<group>"; };
+		63FEFD8D21994D41000647B8 /* DHTimeAxisDigitalDivision.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTimeAxisDigitalDivision.h; sourceTree = "<group>"; };
+		63FEFD8E21994D41000647B8 /* DHTimeAxisDigitalDivision.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHTimeAxisDigitalDivision.m; sourceTree = "<group>"; };
+		63FEFD90219952C6000647B8 /* DHTimeAxisAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTimeAxisAppearance.h; sourceTree = "<group>"; };
+		63FEFD91219952C6000647B8 /* DHTimeAxisAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHTimeAxisAppearance.m; sourceTree = "<group>"; };
+		63FEFD932199531C000647B8 /* DHTimeAxisDynamicItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTimeAxisDynamicItem.h; sourceTree = "<group>"; };
+		63FEFD942199531C000647B8 /* DHTimeAxisDynamicItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHTimeAxisDynamicItem.m; sourceTree = "<group>"; };
+		63FEFD9721995519000647B8 /* DHTimeAxis+Appearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DHTimeAxis+Appearance.h"; sourceTree = "<group>"; };
+		63FEFD9821995519000647B8 /* DHTimeAxis+Appearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DHTimeAxis+Appearance.m"; sourceTree = "<group>"; };
+		63FEFD9B219955D5000647B8 /* DHTimeAxis+Dynamic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DHTimeAxis+Dynamic.h"; sourceTree = "<group>"; };
+		63FEFD9C219955D5000647B8 /* DHTimeAxis+Dynamic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DHTimeAxis+Dynamic.m"; sourceTree = "<group>"; };
+		63FEFDA0219956CD000647B8 /* DHTimeAxisGearRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTimeAxisGearRenderer.h; sourceTree = "<group>"; };
+		63FEFDA1219956CD000647B8 /* DHTimeAxisGearRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHTimeAxisGearRenderer.m; sourceTree = "<group>"; };
+		63FEFDA321995776000647B8 /* DHTimeAxisRuleRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTimeAxisRuleRenderer.h; sourceTree = "<group>"; };
+		63FEFDA421995776000647B8 /* DHTimeAxisRuleRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHTimeAxisRuleRenderer.m; sourceTree = "<group>"; };
+		63FEFDAC21997039000647B8 /* DHTimeAxisAppearance+Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DHTimeAxisAppearance+Renderer.h"; sourceTree = "<group>"; };
+		63FEFDAD21997039000647B8 /* DHTimeAxisAppearance+Renderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DHTimeAxisAppearance+Renderer.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63FEFD5121994818000647B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63FEFD4B21994818000647B8 = {
+			isa = PBXGroup;
+			children = (
+				63FEFD5621994818000647B8 /* DHTimeAxis */,
+				63FEFD5521994818000647B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63FEFD5521994818000647B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63FEFD5421994818000647B8 /* DHTimeAxis.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63FEFD5621994818000647B8 /* DHTimeAxis */ = {
+			isa = PBXGroup;
+			children = (
+				63FEFD6D2199486E000647B8 /* DHTimeAxis */,
+				63FEFD5721994818000647B8 /* AppDelegate.h */,
+				63FEFD5821994818000647B8 /* AppDelegate.m */,
+				63FEFD5A21994818000647B8 /* ViewController.h */,
+				63FEFD5B21994818000647B8 /* ViewController.m */,
+				63FEFD5D21994818000647B8 /* Main.storyboard */,
+				63FEFD602199481B000647B8 /* Assets.xcassets */,
+				63FEFD622199481B000647B8 /* LaunchScreen.storyboard */,
+				63FEFD652199481B000647B8 /* Info.plist */,
+				63FEFD662199481B000647B8 /* main.m */,
+			);
+			path = DHTimeAxis;
+			sourceTree = "<group>";
+		};
+		63FEFD6D2199486E000647B8 /* DHTimeAxis */ = {
+			isa = PBXGroup;
+			children = (
+				63FEFD782199497E000647B8 /* DHTimeAxis.h */,
+				63FEFD792199497E000647B8 /* DHTimeAxis.m */,
+				63FEFD77219948D0000647B8 /* AppearanceCategory */,
+				63FEFD73219948B4000647B8 /* DynamicCategory */,
+				63FEFD722199489F000647B8 /* View */,
+				63FEFD702199488D000647B8 /* Visitor */,
+				63FEFD6E21994874000647B8 /* Model */,
+			);
+			path = DHTimeAxis;
+			sourceTree = "<group>";
+		};
+		63FEFD6E21994874000647B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63FEFD6F2199488A000647B8 /* DHTimeAxisComponent.h */,
+				63FEFD7B21994A02000647B8 /* DHTimeAxisBackground.h */,
+				63FEFD7C21994A02000647B8 /* DHTimeAxisBackground.m */,
+				63FEFD8121994AF6000647B8 /* DHTimeAxisBaseLine.h */,
+				63FEFD8221994AF6000647B8 /* DHTimeAxisBaseLine.m */,
+				63FEFD8721994C5E000647B8 /* DHTimeAxisData.h */,
+				63FEFD8821994C5E000647B8 /* DHTimeAxisData.m */,
+				63FEFD8A21994CAA000647B8 /* DHTimeAxisRule.h */,
+				63FEFD8B21994CAA000647B8 /* DHTimeAxisRule.m */,
+				63FEFD8D21994D41000647B8 /* DHTimeAxisDigitalDivision.h */,
+				63FEFD8E21994D41000647B8 /* DHTimeAxisDigitalDivision.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63FEFD702199488D000647B8 /* Visitor */ = {
+			isa = PBXGroup;
+			children = (
+				63FEFD712199489C000647B8 /* DHTimeAxisVisitor.h */,
+				63FEFD7E21994A4A000647B8 /* DHTimeAxisRenderer.h */,
+				63FEFD7F21994A4A000647B8 /* DHTimeAxisRenderer.m */,
+				63FEFDA0219956CD000647B8 /* DHTimeAxisGearRenderer.h */,
+				63FEFDA1219956CD000647B8 /* DHTimeAxisGearRenderer.m */,
+				63FEFDA321995776000647B8 /* DHTimeAxisRuleRenderer.h */,
+				63FEFDA421995776000647B8 /* DHTimeAxisRuleRenderer.m */,
+				63FEFD8421994BD9000647B8 /* DHTimeAxisAppearanceRecognizer.h */,
+				63FEFD8521994BD9000647B8 /* DHTimeAxisAppearanceRecognizer.m */,
+			);
+			path = Visitor;
+			sourceTree = "<group>";
+		};
+		63FEFD722199489F000647B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63FEFD74219948C3000647B8 /* DHTimeAxisView.h */,
+				63FEFD75219948C3000647B8 /* DHTimeAxisView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		63FEFD73219948B4000647B8 /* DynamicCategory */ = {
+			isa = PBXGroup;
+			children = (
+				63FEFD932199531C000647B8 /* DHTimeAxisDynamicItem.h */,
+				63FEFD942199531C000647B8 /* DHTimeAxisDynamicItem.m */,
+				63FEFD9B219955D5000647B8 /* DHTimeAxis+Dynamic.h */,
+				63FEFD9C219955D5000647B8 /* DHTimeAxis+Dynamic.m */,
+			);
+			path = DynamicCategory;
+			sourceTree = "<group>";
+		};
+		63FEFD77219948D0000647B8 /* AppearanceCategory */ = {
+			isa = PBXGroup;
+			children = (
+				63FEFD90219952C6000647B8 /* DHTimeAxisAppearance.h */,
+				63FEFD91219952C6000647B8 /* DHTimeAxisAppearance.m */,
+				63FEFD9721995519000647B8 /* DHTimeAxis+Appearance.h */,
+				63FEFD9821995519000647B8 /* DHTimeAxis+Appearance.m */,
+				63FEFDAC21997039000647B8 /* DHTimeAxisAppearance+Renderer.h */,
+				63FEFDAD21997039000647B8 /* DHTimeAxisAppearance+Renderer.m */,
+			);
+			path = AppearanceCategory;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63FEFD5321994818000647B8 /* DHTimeAxis */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63FEFD6A2199481B000647B8 /* Build configuration list for PBXNativeTarget "DHTimeAxis" */;
+			buildPhases = (
+				63FEFD5021994818000647B8 /* Sources */,
+				63FEFD5121994818000647B8 /* Frameworks */,
+				63FEFD5221994818000647B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DHTimeAxis;
+			productName = DHTimeAxis;
+			productReference = 63FEFD5421994818000647B8 /* DHTimeAxis.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63FEFD4C21994818000647B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DHTimeAxis;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = daniel;
+				TargetAttributes = {
+					63FEFD5321994818000647B8 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 63FEFD4F21994818000647B8 /* Build configuration list for PBXProject "DHTimeAxis" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63FEFD4B21994818000647B8;
+			productRefGroup = 63FEFD5521994818000647B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63FEFD5321994818000647B8 /* DHTimeAxis */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63FEFD5221994818000647B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63FEFD642199481B000647B8 /* LaunchScreen.storyboard in Resources */,
+				63FEFD612199481B000647B8 /* Assets.xcassets in Resources */,
+				63FEFD5F21994818000647B8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63FEFD5021994818000647B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63FEFD5C21994818000647B8 /* ViewController.m in Sources */,
+				63FEFD672199481B000647B8 /* main.m in Sources */,
+				63FEFD8321994AF6000647B8 /* DHTimeAxisBaseLine.m in Sources */,
+				63FEFDA2219956CD000647B8 /* DHTimeAxisGearRenderer.m in Sources */,
+				63FEFD8621994BD9000647B8 /* DHTimeAxisAppearanceRecognizer.m in Sources */,
+				63FEFD8C21994CAA000647B8 /* DHTimeAxisRule.m in Sources */,
+				63FEFD76219948C3000647B8 /* DHTimeAxisView.m in Sources */,
+				63FEFDAE21997039000647B8 /* DHTimeAxisAppearance+Renderer.m in Sources */,
+				63FEFD7A2199497E000647B8 /* DHTimeAxis.m in Sources */,
+				63FEFDA521995776000647B8 /* DHTimeAxisRuleRenderer.m in Sources */,
+				63FEFD5921994818000647B8 /* AppDelegate.m in Sources */,
+				63FEFD8021994A4A000647B8 /* DHTimeAxisRenderer.m in Sources */,
+				63FEFD8F21994D41000647B8 /* DHTimeAxisDigitalDivision.m in Sources */,
+				63FEFD952199531C000647B8 /* DHTimeAxisDynamicItem.m in Sources */,
+				63FEFD92219952C6000647B8 /* DHTimeAxisAppearance.m in Sources */,
+				63FEFD7D21994A02000647B8 /* DHTimeAxisBackground.m in Sources */,
+				63FEFD9921995519000647B8 /* DHTimeAxis+Appearance.m in Sources */,
+				63FEFD8921994C5E000647B8 /* DHTimeAxisData.m in Sources */,
+				63FEFD9D219955D5000647B8 /* DHTimeAxis+Dynamic.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		63FEFD5D21994818000647B8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63FEFD5E21994818000647B8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		63FEFD622199481B000647B8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63FEFD632199481B000647B8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63FEFD682199481B000647B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		63FEFD692199481B000647B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63FEFD6B2199481B000647B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DHTimeAxis/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.daniel.DHTimeAxis;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63FEFD6C2199481B000647B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DHTimeAxis/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.daniel.DHTimeAxis;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63FEFD4F21994818000647B8 /* Build configuration list for PBXProject "DHTimeAxis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63FEFD682199481B000647B8 /* Debug */,
+				63FEFD692199481B000647B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63FEFD6A2199481B000647B8 /* Build configuration list for PBXNativeTarget "DHTimeAxis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63FEFD6B2199481B000647B8 /* Debug */,
+				63FEFD6C2199481B000647B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63FEFD4C21994818000647B8 /* Project object */;
+}
