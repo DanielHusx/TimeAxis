@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TimeAxis"
-  s.version      = "1.0.3"
+  s.version      = "2.0.0"
   s.summary      = "simple to create time axis for video"
 
   # This description is used to generate tags and improve search results.
