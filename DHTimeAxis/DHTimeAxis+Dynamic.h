@@ -14,7 +14,7 @@
 @property (nonatomic, strong) UIDynamicAnimator *animator;
 @property (nonatomic, strong) UIDynamicItemBehavior *inertialBehavior;
 /// 手动停止滚动减速
-- (void)manuallyStopRollingWithDecelerating;
+- (void)manuallyStopRollingWithDeceleratingExtraUpdate:(void(^)(void))extraUpdate;
 /// 模拟减速动画
 - (void)deceleratingAnimateWithVelocityPoint:(CGPoint)velocityPoint action:(void(^)(CGPoint deceleratingSpeedPoint, BOOL stop))action;
 @end

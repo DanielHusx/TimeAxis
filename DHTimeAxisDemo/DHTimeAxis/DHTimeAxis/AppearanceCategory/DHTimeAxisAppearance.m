@@ -56,5 +56,9 @@ static DHTimeAxisAppearance *_instance = nil;
     _dataStrokeSizeType = DHStrokeSizeTypeFull;
 }
 
-
+- (void)setRendererClass:(Class)rendererClass {
+    NSAssert(![rendererClass isKindOfClass:[DHTimeAxisRenderer class]], @"renderClass must be subclass of DHTimeAxisRender");
+    _rendererClass = rendererClass;
+    
+}
 @end

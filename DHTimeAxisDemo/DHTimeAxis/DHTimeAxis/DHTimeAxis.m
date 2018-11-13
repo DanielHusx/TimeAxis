@@ -110,15 +110,17 @@
 }
 - (void)manuallyStopRolling {
     // 刹车
-    [self manuallyStopRollingWithDecelerating];
-    // 更新变量
-    self.paning = NO;
-    self.currentTimeInterval = _rule.currentTimeInterval;
+    __weak typeof(self) weakself = self;
+    [self manuallyStopRollingWithDeceleratingExtraUpdate:^{
+        // 更新变量
+        weakself.paning = NO;
+        weakself.currentTimeInterval = weakself.rule.currentTimeInterval;
+    }];
 }
 #pragma mark - private method
 /// 判断在停止拖动的情况下，数据数组是否存在包含当前时间的数据项
 - (void)judgeExistDataInTheInterval:(NSTimeInterval)targetTimeInterval fromDataArray:(NSArray <DHTimeAxisData *> *)dataArray withPanState:(BOOL)isPaning {
-    if (isPaning == NO || !dataArray) return;
+    if (isPaning == YES || !dataArray) return;
     
     if ([dataArray count] == 0) return ;
     
@@ -129,7 +131,7 @@
         for (int i = 0; i < [dataArray count]; i++) {
             DHTimeAxisData *subData = [dataArray objectAtIndex:i];
             
-            if (subData.startTimeInterval >= targetTimeInterval && subData.endTimeInterval <= targetTimeInterval) {
+            if (subData.startTimeInterval <= targetTimeInterval && subData.endTimeInterval >= targetTimeInterval) {
                 if (weakself.delegate && [weakself.delegate respondsToSelector:@selector(timeAxis:didEndedAtDataSection:)]) {
                     [weakself.delegate timeAxis:weakself didEndedAtDataSection:[subData copy]];
                     break;
@@ -152,8 +154,10 @@
     } else {
         [self uponAppearanceForUpdateCurrentTimeIntervalFromOffset:offset viewSize:viewSize toOptimisticOffset:&optimisticOffset optimisticViewSize:&optimisticViewSize];
     }
-    
-    self.currentTimeInterval = from - (optimisticOffset * 1.0 / [_digital aSecondOfPixelWithViewWidth:optimisticViewSize]);
+    __weak typeof(self) weakself = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        weakself.currentTimeInterval = from - (optimisticOffset * 1.0 / [weakself.digital aSecondOfPixelWithViewWidth:optimisticViewSize]);
+    });
 }
 #pragma mark - observer
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
@@ -205,8 +209,8 @@
 - (void)panAction:(UIPanGestureRecognizer *)sender {
     switch (sender.state) {
         case UIGestureRecognizerStateBegan: {
-            _tempTimeInterval = _currentTimeInterval;
             self.paning = YES;
+            _tempTimeInterval = _currentTimeInterval;
             break;
         }
         case UIGestureRecognizerStateChanged: {

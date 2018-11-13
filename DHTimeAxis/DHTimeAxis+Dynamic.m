@@ -9,13 +9,16 @@
 #import "DHTimeAxisDynamicItem.h"
 
 @implementation DHTimeAxis (Dynamic)
-- (void)manuallyStopRollingWithDecelerating {
+- (void)manuallyStopRollingWithDeceleratingExtraUpdate:(void(^)(void))extraUpdate {
     if (self.inertialBehavior != nil) {
         if (self.animator == nil) {
             self.animator = [[UIDynamicAnimator alloc] init];
         }
         [self.animator removeBehavior:self.inertialBehavior];
         self.inertialBehavior = nil;
+        if (extraUpdate) {
+            extraUpdate();
+        }
     }
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

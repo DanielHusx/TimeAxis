@@ -12,6 +12,7 @@
 
 @class DHTimeAxis;
 @protocol DHTimeAxisDelegate <NSObject>
+@optional
 /// 更新当前时间
 - (void)timeAxis:(DHTimeAxis *)timeAxis didChangedTimeInterval:(NSTimeInterval)currentTimeInterval;
 /// 更新放缩比例
