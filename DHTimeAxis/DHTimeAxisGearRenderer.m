@@ -67,7 +67,7 @@
         if (self.axisDirection == DHTimeAxisDirectionHorizontal) {
             CGPoint point = CGPointMake(tempHourPosition, self.viewHeight);
             // 文字显示
-            NSString *time = [NSString stringWithFormat:@"%02ld:00",tempHour > 23 ? tempHour-24 : (tempHour < 0 ? tempHour + 24: tempHour)];
+            NSString *time = [NSString stringWithFormat:@"%02zd:00",tempHour > 23 ? tempHour-24 : (tempHour < 0 ? tempHour + 24: tempHour)];
             [time drawInRect:CGRectMake(point.x-13, point.y-30, 40, 20) withAttributes:aTimeAxisDigitalDivision.digitalAttribute];
             
             // 大刻度线(小时)
@@ -86,7 +86,7 @@
         } else {
             CGPoint point = CGPointMake(self.viewWidth ,tempHourPosition);
             // 文字显示
-            NSString *time = [NSString stringWithFormat:@"%02ld:00",tempHour > 23 ? tempHour-24 : (tempHour < 0 ? tempHour + 24: tempHour)];
+            NSString *time = [NSString stringWithFormat:@"%02zd:00",tempHour > 23 ? tempHour-24 : (tempHour < 0 ? tempHour + 24: tempHour)];
             [time drawInRect:CGRectMake(10, point.y - 10, 40, 20) withAttributes:aTimeAxisDigitalDivision.digitalAttribute];
             
             // 大刻度线(小时)

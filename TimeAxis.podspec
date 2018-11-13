@@ -55,7 +55,7 @@ Pod::Spec.new do |s|
 
   s.author             = { "DanielHusx" => "danielxing@163.com" }
   # Or just: s.author    = "DanielHusx"
-  # s.authors            = { "DanielHusx" => "danielxing@163.com" }
+  s.authors            = { "DanielHusx" => "danielxing@163.com" }
   # s.social_media_url   = "http://twitter.com/DanielHusx"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "DHTimeAxis/*"
+  s.source_files  = "DHTimeAxis", "DHTimeAxis/*", "DHTimeAxis/**/*"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -118,7 +118,7 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  s.frameworks = "Foundation", "UIKit"
+  s.frameworks = "Foundation","UIKit"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
