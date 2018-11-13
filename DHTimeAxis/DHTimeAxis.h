@@ -5,6 +5,7 @@
 //  Copyright © 2018年 daniel. All rights reserved.
 
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #import "DHTimeAxisComponent.h"
 #import "DHTimeAxisData.h"
 

@@ -76,7 +76,7 @@
             CGContextStrokePath(self.context);
             
             // 小刻度线(10分钟)
-            NSInteger piece = 6;
+            int piece = 6;
             for (int i = 1; i < piece; i++) {
                 CGPoint point = CGPointMake(aHourWidth/piece*i+tempHourPosition, self.viewHeight);
                 CGContextMoveToPoint(self.context, point.x-.5, 60);
@@ -95,7 +95,7 @@
             CGContextStrokePath(self.context);
             
             // 小刻度线(10分钟)
-            NSInteger piece = 6;
+            int piece = 6;
             for (int i = 1; i < piece; i++) {
                 CGPoint point = CGPointMake(self.viewWidth, aHourWidth/piece*i+tempHourPosition);
                 CGContextMoveToPoint(self.context, 80, point.y);
