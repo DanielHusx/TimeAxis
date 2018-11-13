@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TimeAxis"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "simple to create time axis for video"
 
   # This description is used to generate tags and improve search results.
@@ -55,7 +55,7 @@ Pod::Spec.new do |s|
 
   s.author             = { "DanielHusx" => "danielxing@163.com" }
   # Or just: s.author    = "DanielHusx"
-  s.authors            = { "DanielHusx" => "danielxing@163.com" }
+  # s.authors            = { "DanielHusx" => "danielxing@163.com" }
   # s.social_media_url   = "http://twitter.com/DanielHusx"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "DHTimeAxis", "DHTimeAxis/*", "DHTimeAxis/**/*"
+  s.source_files  = "DHTimeAxis", "DHTimeAxis/*.{h,m}"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
