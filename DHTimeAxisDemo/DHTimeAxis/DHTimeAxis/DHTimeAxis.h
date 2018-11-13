@@ -6,8 +6,9 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "DHTimeAxisComponent.h"
 #import "DHTimeAxisData.h"
+#import "DHTimeAxisAppearance+Renderer.h"
+#import "DHTimeAxisAppearance.h"
 
 @class DHTimeAxis;
 @protocol DHTimeAxisDelegate <NSObject>

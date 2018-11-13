@@ -68,19 +68,19 @@
             CGPoint point = CGPointMake(tempHourPosition, self.viewHeight);
             // 文字显示
             NSString *time = [NSString stringWithFormat:@"%02zd:00",tempHour > 23 ? tempHour-24 : (tempHour < 0 ? tempHour + 24: tempHour)];
-            [time drawInRect:CGRectMake(point.x-13, point.y-30, 40, 20) withAttributes:aTimeAxisDigitalDivision.digitalAttribute];
+            [time drawInRect:CGRectMake(point.x-13, point.y-20, 40, 20) withAttributes:aTimeAxisDigitalDivision.digitalAttribute];
             
             // 大刻度线(小时)
-            CGContextMoveToPoint(self.context, point.x-.5, 40);
-            CGContextAddLineToPoint(self.context, point.x-.5, point.y-40);
+            CGContextMoveToPoint(self.context, point.x-.5, 20);
+            CGContextAddLineToPoint(self.context, point.x-.5, point.y-20);
             CGContextStrokePath(self.context);
             
             // 小刻度线(10分钟)
             int piece = 6;
             for (int i = 1; i < piece; i++) {
                 CGPoint point = CGPointMake(aHourWidth/piece*i+tempHourPosition, self.viewHeight);
-                CGContextMoveToPoint(self.context, point.x-.5, 60);
-                CGContextAddLineToPoint(self.context, point.x-.5, point.y - 60);
+                CGContextMoveToPoint(self.context, point.x-.5, 30);
+                CGContextAddLineToPoint(self.context, point.x-.5, point.y - 30);
                 CGContextStrokePath(self.context);
             }
         } else {
@@ -90,16 +90,16 @@
             [time drawInRect:CGRectMake(10, point.y - 10, 40, 20) withAttributes:aTimeAxisDigitalDivision.digitalAttribute];
             
             // 大刻度线(小时)
-            CGContextMoveToPoint(self.context, 60, point.y);
-            CGContextAddLineToPoint(self.context, point.x-60, point.y);
+            CGContextMoveToPoint(self.context, 50, point.y);
+            CGContextAddLineToPoint(self.context, point.x-50, point.y);
             CGContextStrokePath(self.context);
             
             // 小刻度线(10分钟)
             int piece = 6;
             for (int i = 1; i < piece; i++) {
                 CGPoint point = CGPointMake(self.viewWidth, aHourWidth/piece*i+tempHourPosition);
-                CGContextMoveToPoint(self.context, 80, point.y);
-                CGContextAddLineToPoint(self.context, point.x-80, point.y);
+                CGContextMoveToPoint(self.context, 60, point.y);
+                CGContextAddLineToPoint(self.context, point.x-60, point.y);
                 CGContextStrokePath(self.context);
             }
         }

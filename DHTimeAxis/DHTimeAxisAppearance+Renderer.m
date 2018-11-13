@@ -10,7 +10,7 @@
 
 @implementation DHTimeAxisAppearance (Renderer)
 
-+ (void)renderRuleAppearanceWithViewSize:(CGSize)viewSize direction:(DHAxisDirection)direction {
++ (void)renderRuleAppearanceWithDirection:(DHAxisDirection)direction {
     DHTimeAxisAppearance *appearance = [DHTimeAxisAppearance sharedAppearance];
     appearance.mainBackgroundColor = [UIColor blackColor];
     appearance.rendererClass = [DHTimeAxisRuleRenderer class];
@@ -27,7 +27,7 @@
     
     appearance.baseLineColor = [UIColor whiteColor];
     appearance.baseLineStrokeSize = 1.0;
-    appearance.baseLineFixedOffset = 20.0;
+    appearance.baseLineFixedOffset = 80.0;
     appearance.baseLineOffsetLocationType = DHStrokeLocationTypeFlexible;
     
     appearance.minimumScale = 0.5;
@@ -39,7 +39,7 @@
 }
 
 
-+ (void)renderGearAppearanceWithViewSize:(CGSize)viewSize direction:(DHAxisDirection)direction {
++ (void)renderGearAppearanceWithDirection:(DHAxisDirection)direction {
     DHTimeAxisAppearance *appearance = [DHTimeAxisAppearance sharedAppearance];
     appearance.mainBackgroundColor = [UIColor blackColor];
     appearance.rendererClass = [DHTimeAxisGearRenderer class];

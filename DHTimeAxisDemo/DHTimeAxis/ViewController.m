@@ -18,9 +18,9 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor yellowColor];
     
-    CGSize viewSize = CGSizeMake(400, 300);
+    CGSize viewSize = CGSizeMake(self.view.frame.size.width, 100);
     
-    [DHTimeAxisAppearance renderGearAppearanceWithViewSize:viewSize direction:DHAxisDirectionHorizontal];
+    [DHTimeAxisAppearance renderRuleAppearanceWithDirection:DHAxisDirectionHorizontal];
     _axis = [[DHTimeAxis alloc] initWithFrame:CGRectMake(10, self.view.frame.size.height/2.0-100, viewSize.width, viewSize.height)];
     [self.view addSubview:_axis];
 }

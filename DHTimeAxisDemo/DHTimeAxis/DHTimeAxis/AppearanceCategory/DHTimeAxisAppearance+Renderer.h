@@ -11,8 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DHTimeAxisAppearance (Renderer)
 
-+ (void)renderRuleAppearanceWithViewSize:(CGSize)viewSize direction:(DHAxisDirection)direction;
-+ (void)renderGearAppearanceWithViewSize:(CGSize)viewSize direction:(DHAxisDirection)direction;
++ (void)renderRuleAppearanceWithDirection:(DHAxisDirection)direction;
++ (void)renderGearAppearanceWithDirection:(DHAxisDirection)direction;
 
 @end
 
