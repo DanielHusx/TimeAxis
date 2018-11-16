@@ -20,13 +20,16 @@ $git clone https://github.com/DanielHusx/TimeAxis.git
 
 ```objective-c
 #import <DHTimeAxis.h>
+
     /**
     DHTimeAxisAppearance是个单例类，用于控制外观属性，具体属性请查看该类
     其中属性rendererClass 必须是继承DHTimeAxisRenderer的子类，
     它是能够使用DHTimeAxisAppearance属性进行绘制的类，具体使用方式可以参照DHTimeAxisGearRenderer或DHTimeAxisRuleRenderer的实现
     */
     [DHTimeAxisAppearance renderGearAppearanceWithDirection:DHAxisDirectionHorizontal];
+
     DHTimeAxis *axis = [[DHTimeAxis alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height/2.0-100, self.view.frame.size.width, 100)];
+    axis.delegate = self
     [self.view addSubview:axis];
 
 ```
@@ -98,5 +101,9 @@ $git clone https://github.com/DanielHusx/TimeAxis.git
 
 ![GearExample.png](./ReadMeAssets/GearExample.png)
 
+<<<<<<< HEAD
 ####DHTimeAxisRuleRenderer
 ![RuleExample.png](./ReadMeAssets/RuleExample.png)
+=======
+![RuleRenderer](./ReadMeAssets/RuleExample.png)
+>>>>>>> f3446d383d95da4b79fc0ca066fc4a8cfff9a58c
