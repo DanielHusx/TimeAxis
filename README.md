@@ -97,13 +97,12 @@ $git clone https://github.com/DanielHusx/TimeAxis.git
 
 
 ###效果图
+
 ####DHTimeAxisGearRenderer
 
 ![GearExample.png](./ReadMeAssets/GearExample.png)
 
-<<<<<<< HEAD
 ####DHTimeAxisRuleRenderer
-![RuleExample.png](./ReadMeAssets/RuleExample.png)
-=======
+
 ![RuleRenderer](./ReadMeAssets/RuleExample.png)
 >>>>>>> f3446d383d95da4b79fc0ca066fc4a8cfff9a58c
