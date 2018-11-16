@@ -6,7 +6,7 @@
 - 提供丰富的回调反馈，可以详细查看DHTimeAxisDelegate
 
 
-###快速集成
+### 集成
 
 ```shell
 pod 'TimeAxis'
@@ -16,7 +16,7 @@ $git clone https://github.com/DanielHusx/TimeAxis.git
 
 
 
-###使用示例
+### 使用示例
 
 ```objective-c
 #import <DHTimeAxis.h>
@@ -34,7 +34,7 @@ $git clone https://github.com/DanielHusx/TimeAxis.git
 
 ```
 
-###丰富的回调
+### 丰富的回调
 ```objective-c
 @class DHTimeAxis;
 @protocol DHTimeAxisDelegate <NSObject>
@@ -64,7 +64,7 @@ $git clone https://github.com/DanielHusx/TimeAxis.git
 @end
 ```
 
-###绘制方法：
+### 绘制方法：
 自定义绘制方法只需要三步：
 1. 继承DHTimeAxisRenderer类并实现如下方法，具体实现内容可以参考DHTimeAxisGearRenderer类和DHTimeAxisRuleRenderer类
 ```objective-c
@@ -96,12 +96,12 @@ $git clone https://github.com/DanielHusx/TimeAxis.git
 
 
 
-###效果图
+### 效果图
 
-####DHTimeAxisGearRenderer
+#### DHTimeAxisGearRenderer
 
 ![GearExample.png](./ReadMeAssets/GearExample.png)
 
-####DHTimeAxisRuleRenderer
+#### DHTimeAxisRuleRenderer
 
 ![RuleRenderer](./ReadMeAssets/RuleExample.png)
