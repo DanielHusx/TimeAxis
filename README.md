@@ -105,4 +105,3 @@ $git clone https://github.com/DanielHusx/TimeAxis.git
 ####DHTimeAxisRuleRenderer
 
 ![RuleRenderer](./ReadMeAssets/RuleExample.png)
->>>>>>> f3446d383d95da4b79fc0ca066fc4a8cfff9a58c
