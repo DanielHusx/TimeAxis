@@ -13,6 +13,12 @@
 #import "DHTimeAxisAppearanceRecognizer.h"
 
 @implementation DHTimeAxis (Appearance)
+- (void)registeAppearanceNotification {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateAppearance) name:kDHAppearanceUpdatedNotificationName object:nil];
+}
+- (void)resignAppearanceNotification {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kDHAppearanceUpdatedNotificationName object:nil];
+}
 - (NSArray *)updateAppearanceArrayWithSize:(CGSize)size {
     DHTimeAxisAppearance *appearance = [DHTimeAxisAppearance sharedAppearance];
     id <DHTimeAxisVisitor> appearanceRecognizer = [[DHTimeAxisAppearanceRecognizer alloc] initWithViewSize:size appearance:appearance];
@@ -37,7 +43,7 @@
         [axisData acceptVisitor:appearanceRecognizer];
     }
 }
-- (UIColor *)updateAppearanceBackgroundColor {
+- (UIColor *)updateAppearanceMainBackgroundColor {
     return [[DHTimeAxisAppearance sharedAppearance] mainBackgroundColor];
 }
 - (Class)updateAppearanceRenderer {

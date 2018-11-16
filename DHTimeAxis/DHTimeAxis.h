@@ -51,10 +51,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, assign, getter=isPinching) BOOL pinching;
 
 /**
- 更新外观
- */
-- (void)updateAppearance;
-/**
  外部驱动时间轴更新
  
  @param currentTimeInterval 当前时间刻度

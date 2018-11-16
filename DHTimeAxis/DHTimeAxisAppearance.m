@@ -6,7 +6,6 @@
 
 #import "DHTimeAxisAppearance.h"
 #import "DHTimeAxisRenderer.h"
-#import "DHTimeAxisRuleRenderer.h"
 
 @implementation DHTimeAxisAppearance
 static DHTimeAxisAppearance *_instance = nil;
@@ -60,5 +59,9 @@ static DHTimeAxisAppearance *_instance = nil;
     NSAssert(![rendererClass isKindOfClass:[DHTimeAxisRenderer class]], @"renderClass must be subclass of DHTimeAxisRender");
     _rendererClass = rendererClass;
     
+}
+
+- (void)updateAppearance {
+    [[NSNotificationCenter defaultCenter] postNotificationName:kDHAppearanceUpdatedNotificationName object:nil];
 }
 @end

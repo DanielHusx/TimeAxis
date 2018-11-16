@@ -65,7 +65,7 @@ $git clone https://github.com/DanielHusx/TimeAxis.git
 ```
 
 ### 绘制方法：
-自定义绘制方法只需要三步：
+自定义绘制方法只需要两步：
 1. 继承DHTimeAxisRenderer类并实现如下方法，具体实现内容可以参考DHTimeAxisGearRenderer类和DHTimeAxisRuleRenderer类
 ```objective-c
 /// 绘制数据
@@ -86,12 +86,11 @@ $git clone https://github.com/DanielHusx/TimeAxis.git
 - (void)updateValueWithTimeAxisDigitalDivision:(DHTimeAxisDigitalDivision *)aTimeAxisDigitalDivision;
 - (void)updateValueWithTimeAxisBackground:(DHTimeAxisBackground *)aTimeAxisBackground;
 ```
-2. 设置`[DHTimeAxisAppearance sharedAppearance].rendererClass`为自定义类名
-3. 调用更新DHTimeAxis的更新方法
+2. 设置`[DHTimeAxisAppearance sharedAppearance].rendererClass`为自定义类名并更新方法
 
 ```objective-c
-// 更新方法
-[timeAxis updateAppearance];
+[DHTimeAxisAppearance sharedAppearance].rendererClass = [DHTimeAxisGearRenderer class];
+[[DHTimeAxisAppearance sharedAppearance] updateAppearance];
 ```
 
 
