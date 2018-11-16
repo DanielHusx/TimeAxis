@@ -53,6 +53,7 @@
     [self removeObserver:self forKeyPath:@"currentScale"];
     [self removeObserver:self forKeyPath:@"paning"];
     [self removeObserver:self forKeyPath:@"pinching"];
+    [self resignAppearanceNotification];
 }
 
 #pragma mark - config method
@@ -72,31 +73,10 @@
     [self addObserver:self forKeyPath:@"currentScale" options:NSKeyValueObservingOptionNew context:nil];
     [self addObserver:self forKeyPath:@"paning" options:NSKeyValueObservingOptionNew context:nil];
     [self addObserver:self forKeyPath:@"pinching" options:NSKeyValueObservingOptionNew context:nil];
-    
+    [self registeAppearanceNotification];
 }
 
 #pragma mark - public method
-- (void)updateAppearance {
-    self.axisView.backgroundColor = [self updateAppearanceBackgroundColor];
-    self.axisView.rendererClass = [self updateAppearanceRenderer];
-    // 重新获取新的界面
-    NSArray *temp = [self updateAppearanceArrayWithSize:self.axisView.frame.size];
-    
-    for (id<DHTimeAxisComponent> axis in temp) {
-        if ([axis isKindOfClass:[DHTimeAxisRule class]]) {
-            _rule = axis;
-        } else if ([axis isKindOfClass:[DHTimeAxisDigitalDivision class]]) {
-            _digital = axis;
-        }
-    }
-    
-    self.currentTimeInterval = _rule.currentTimeInterval;
-    self.currentScale = _digital.currentScale;
-    
-    self.axisAppearanceArray = [temp mutableCopy];
-    
-    [self updateAxisViewAppearanceArray];
-}
 - (void)updateWithCurrentTimeInterval:(NSTimeInterval)currentTimeInterval {
     self.currentTimeInterval = currentTimeInterval;
 }
@@ -158,6 +138,30 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         weakself.currentTimeInterval = from - (optimisticOffset * 1.0 / [weakself.digital aSecondOfPixelWithViewWidth:optimisticViewSize]);
     });
+}
+/// 更新外观
+- (void)updateAppearance {
+    // 获取基本属性
+    self.axisView.backgroundColor = [self updateAppearanceMainBackgroundColor];
+    self.axisView.rendererClass = [self updateAppearanceRenderer];
+    // 重新获取新的界面
+    NSArray *temp = [self updateAppearanceArrayWithSize:self.axisView.frame.size];
+    
+    // 引用到特殊类
+    for (id<DHTimeAxisComponent> axis in temp) {
+        if ([axis isKindOfClass:[DHTimeAxisRule class]]) {
+            _rule = axis;
+        } else if ([axis isKindOfClass:[DHTimeAxisDigitalDivision class]]) {
+            _digital = axis;
+        }
+    }
+    // 更新数据
+    self.currentTimeInterval = _rule.currentTimeInterval;
+    self.currentScale = _digital.currentScale;
+    
+    self.axisAppearanceArray = [temp mutableCopy];
+    // 更新view的外观数组
+    [self updateAxisViewAppearanceArray];
 }
 #pragma mark - observer
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {

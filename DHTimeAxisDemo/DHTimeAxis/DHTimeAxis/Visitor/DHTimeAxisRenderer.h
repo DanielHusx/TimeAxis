@@ -14,7 +14,9 @@
 NS_ASSUME_NONNULL_BEGIN
 /**
  渲染绘制方法
- 如需自定义绘制方法，需要实现此类所有的方法，最后只要更改DHTimeAxisView.h的渲染Visitor的初始化即可
+ 如需自定义绘制方法，
+ 1. 继承实现此类所有visit方法
+ 2. 更改DHTimeAxisAppearance的渲染rendererClass为自定义类名即可
  */
 @interface DHTimeAxisRenderer : NSObject <DHTimeAxisVisitor>
 @property (nonatomic, assign) CGContextRef context;

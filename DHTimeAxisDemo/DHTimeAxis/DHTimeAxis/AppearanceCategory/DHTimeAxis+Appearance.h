@@ -16,9 +16,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// 获取更新的渲染类
 - (Class)updateAppearanceRenderer;
 /// 获取更新的背景色
-- (UIColor *)updateAppearanceBackgroundColor;
+- (UIColor *)updateAppearanceMainBackgroundColor;
 /// 基于外观 提供正确的偏移位置与视图宽度
 - (void)uponAppearanceForUpdateCurrentTimeIntervalFromOffset:(CGPoint)offset viewSize:(CGSize)viewSize toOptimisticOffset:(CGFloat *)opOffset optimisticViewSize:(CGFloat *)opViewSize;
+/// 注册Appearance通知
+- (void)registeAppearanceNotification;
+/// 销毁Appearance通知
+- (void)resignAppearanceNotification;
 @end
 
 NS_ASSUME_NONNULL_END

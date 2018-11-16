@@ -6,6 +6,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+/// 更新外观数据的通知
+static NSString *const kDHAppearanceUpdatedNotificationName = @"kDHAppearanceUpdatedNotificationName";
 
 typedef NS_ENUM(NSUInteger, DHAxisDirection) {
     DHAxisDirectionHorizontal,  // 水平
@@ -29,8 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
  外观管理器
  */
 @interface DHTimeAxisAppearance : NSObject
-
+/// 单例方法
 + (instancetype)sharedAppearance;
+
 /// 渲染Class，必须是DHTimeAxisRenderer子类
 @property (nonatomic, assign) Class rendererClass;
 /// 方向
@@ -67,6 +70,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIColor *dataStrokeColor;
 @property (nonatomic, assign) CGFloat dataStrokeSize;
 @property (nonatomic, assign) DHStrokeSizeType dataStrokeSizeType;
+
+/// 手动更新
+- (void)updateAppearance;
 
 @end
 
